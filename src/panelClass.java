@@ -36,21 +36,22 @@ public class panelClass extends JPanel {
             @Override
             public void mouseReleased(MouseEvent arg0) {
                 Menu m = new Menu();
-                if(clicado == false){
-                    JLabel lbl = new lbl().getLabel();
-                    p.add(lbl, BorderLayout.CENTER);
-                    turno.addT();
-                    clicado = true;
+                if(turno.end == false){
+                    if(clicado == false){
+                        JLabel lbl = new lbl().getLabel();
+                        p.add(lbl, BorderLayout.CENTER);
+                        turno.addT();
+                        clicado = true;
                     
-                    if(lbl.getText().equals("X")){
-                        Menu.quadrados.get(nl).setSimbolo(1);
-                    }else{
-                        Menu.quadrados.get(nl).setSimbolo(2);
-                    }
-
+                        if(lbl.getText().equals("X")){
+                            Menu.quadrados.get(nl).setSimbolo(1);
+                        }else{
+                            Menu.quadrados.get(nl).setSimbolo(2);
+                        }
                     p.repaint();
                     p.revalidate();
                     new regras();
+                }
                 }
             }
 

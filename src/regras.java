@@ -20,6 +20,7 @@ public class regras {
              }else{
                 JOptionPane.showMessageDialog(null,"X ganhou!"); 
              }
+             turno.end = true;
          }else{
              if(turno.t == 9){
                  JOptionPane.showMessageDialog(null,"Deu velha!");
